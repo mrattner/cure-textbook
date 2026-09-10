@@ -1,0 +1,52 @@
+\startenvironment
+
+  %%%%% FONTS %%%%%
+  % TODO: I don't understand enough to know why the `use<something>` command is
+  % necessary before the two `\define<...>family` commands...
+  \usebodyfont[]
+
+  \definefallbackfamily[main][rm][HiraginoSans][preset=range:japanese]
+  \definefontfamily[main][rm][XCharter]
+  
+  % Enable for line breaking across CJK words
+  \setscript[nihongo]
+  
+  % NB: Each family only supports certain sizes; lookup which ones are available.
+  \setupbodyfont[main,rm,12pt]
+  
+  %%%%% LAYOUT %%%%%
+  \setupwhitespace[big]   % Paragraph spacing
+  \setupinterlinespace[line=4.0ex]  % Line spacing
+  \setuppapersize[letter]
+  \setuplayout[
+    topspace=0.25in,
+    backspace=0.5in,
+    edge=0.0in,
+    margin=0.0in,
+    footer=0.0in,
+    footerdistance=0.0in,
+    bottom=0.25in,
+    % Necessary to make layout fill the entire page.
+    width=fit,
+    height=fit]
+  
+  \setupheadertexts % Reset
+  \setupheadertexts [chapter] [pagenumber] [pagenumber] [chapter]
+  \setuppagenumbering[alternative=doublesided]
+  
+  % さくら appears a lot, so render her name in a special way.
+  \define\Sakura{さくら}
+  
+  % Path is relative to the calling file, not this environment file.
+  \setupexternalfigures
+    [directory={../media/}]
+
+  % Custom macro for inserting a glossed example sentence.
+  \define[2]\Gloss{
+    \startframedtext
+      #1\crlf
+      \quote{#2}
+    \stopframedtext
+  }
+
+\stopenvironment
