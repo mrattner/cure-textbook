@@ -2,11 +2,19 @@ out_dir := 'out'
 
 # Compile ConTeXt to PDF
 compile TEX_FILEPATH:
-    cd {{justfile_directory()}}/{{out_dir}} && context --errors=list {{justfile_directory()}}/{{TEX_FILEPATH}}
+    #!/usr/bin/env sh
+    set -euo pipefail
+    # The working directory must be the same as the source file being compiled
+    # for component path resolution to work.
+    cd $(dirname {{TEX_FILEPATH}})
+    context --errors=list $(basename {{TEX_FILEPATH}})
+    # There isn't an option to set the output directory for `context`
+    # executable, so just move the output files afterward
+    mv *.{tuc,pdf,log} {{justfile_directory()}}/{{out_dir}}
 
 # Remove all files in the output dir
 clean:
-    rm out/*.*
+    rm {{justfile_directory()}}/{{out_dir}}/*.* || true
 
 # Convert the referenced image to PNG and save as next figure no.
 nextfigure IMAGE_NAME:
