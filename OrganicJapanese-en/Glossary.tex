@@ -1,0 +1,83 @@
+\environment env_ConfigGlobal
+\environment env_Config
+
+\definedescription[TermEntry] [
+  alternative=hanging,
+  width=fit, margin=2.0em, distance=0.0em]
+
+% Keep the rōmaji and Japanese halves of a term on the same line
+\define[2]\Romajiterm{\Cap{#1}~ #2}
+
+\startcomponent Glossary
+\startchapter[title={Glossary}]
+
+\startnarrow[left=5.0em,right=5.0em,after={\blank[big]}] [left,right]
+{\tfx{\sl Editor's note: As well as terms mentioned in Cure Dolly's lessons, this list includes terms that learners may encounter in dictionaries, grammar books, and discussions of Japanese language.}}
+\stopnarrow
+
+\TermEntry{ateji 当て字}\quote{assigned characters}: Kanji used for spelling a word phonetically without regard to the characters' meanings; or vice versa, a spelling chosen for the kanji's meanings regardless of their readings.
+
+\TermEntry{bushu 部首}\quote{group neck}: The principal radical of a kanji. Every kanji has only one bushu; this may be the entire character for radicals that themselves are kanji. Print dictionaries and electronic input systems, both Chinese and Japanese, sort characters by their chief radical and stroke count. This arrangement allows one to easily look up a character or compound without having to know its pronunciation.
+
+\TermEntry{conjugation}The inflection system for verbs in Romance languages, from the Latin for \quote{joining together}. Nowadays it more broadly refers to verb inflection in any language. However, it is a Western-centered term that can muddle students' understanding of languages that don't follow Latin-like verb transformations. (The technically correct term for an unchanging stem + affix inflection system, like that of Japanese and Turkish, is {\em agglutination}; Dolly-sensei quite sensibly avoids such linguistics jargon in her teaching.)
+
+\TermEntry{dakuten 濁点} \quote{dulling dots}: The \Grapheme{ﾞ} diacritic applied to kana beginning with an unvoiced consonant (\Phoneme{k}, \Phoneme{s}, \Phoneme{t}, \Phoneme{h} or \Phoneme{f}) to change the onset to their corresponding voiced or \quotation{dull} consonant (\Phoneme{g}, \Phoneme{z}, \Phoneme{d}, \Phoneme{b}).
+
+\TermEntry{eigo 英語} English language. The character 英 is used as ateji here.
+
+\TermEntry{eihongo 英本語} \quote{Japanglish}, broken or badly translated Japanese by English speakers.
+
+\TermEntry{furigana ふりがな} \quote{waving kana}: Small kana (ruby text) printed alongside kanji to indicate their phonetic reading.
+
+\TermEntry{gemination} Doubling, as of a consonant in phonetics, from the Latin for \quote{twin}. In Japanese a small \Grapheme{っ} or \Grapheme{ッ} geminates the following consonant.
+
+\TermEntry{godan 五段} \quote{five-level}: Verbs that have stems ending in each of the five vowel sounds あ-い-う-えお, the う-stem being their plain dictionary form.
+
+\TermEntry{gojuuon 五十音} \quote{fifty sounds}: The regular phonetic sort order of kana starting with あ､い､う､え､お\ldots{} Kana charts are laid out as a 5×10 grid in this order.
+
+\TermEntry{hentaigana 変体仮名} \quote{unusual-form kana}: Alternative classical forms of hiragana that are rarely seen post-standardization in 1900. Sometimes used as a stylistic choice; for example, on restaurant signs.
+
+\TermEntry{hiragana ひらがな} \quote{ordinary kana}: Syllabary with letters for every possible monosyllable in Japanese, of which there are about 50 ({\em see} \Romajiterm{gojuuon}{五十音}) compared to English's >15,000. Originally simplified from cursive forms of kanji.
+
+\TermEntry{ichidan 一段} \quote{one-level}: Verbs whose stems do not change, only dropping the final kana from their dictionary form to create the stem.
+
+\TermEntry{inflection} When the form of a word changes according to its grammatical role in a sentence. Examples: In English, verbs can inflect according to tense ({\em going}, {\em gone}, {\em went}) and person ({\em go}, {\em goes}); nouns can inflect according to number ({\em dog}, {\em dogs}; {\em goose}, {\em geese}).
+
+\TermEntry{iroha いろは} An ordering of kana based on a classical poem that begins \ja\quotation{\ruby{色}{いろ}は\ruby{匂}{にほ}へど\ldots{}}\en. The \hbox{いろは} poem was a kana pangram at the time of its composition in the Heian period, though Japanese pronunciation has changed since. This acrostic ordering is less common than gojuuon order but is still used sometimes for enumerating items like {\cap A, B, C} in English.
+
+\TermEntry{jukugo 熟語} \quote{mellowed word}: Compound word of two or more kanji. Kanji often take their on' readings when appearing this way, as in the case of the word \hbox{熟語} itself (on'yomi ジュク + ゴ).
+
+\TermEntry{kana 仮名} \quote{borrowed names}: The letters of the hiragana and katakana syllabaries; phonetically written Japanese syllables. Named as such because the characters they were derived from were \quotation{borrowed} for their sounds.
+
+\TermEntry{kanji 漢字} \quote{Han characters}: Chinese characters, called {\em hànzì} in Mandarin. The technology of writing in China dates back about 5,000 years, undergoing several significant shifts over the millennia. The clerical script of the Han dynasty was introduced to Japan during the first or second century \cap{CE}, by which time the characters had begun to resemble the modern forms they have today.
+
+\TermEntry{katakana カタカナ} \quote{fragment kana}: The secondary Japanese syllabary used mostly for loanwords, onomatopoeia, and for conveying emphasis. Originally developed from phonetic annotations on kanji.
+
+\TermEntry{keigo 敬語} \quote{polite language}: Respectful register of written and spoken Japanese used for business, speaking to one's superiors, new acquaintances, and formal situations. Compare to, for example, the choice between {\em tutoyer ou vouvoyer} in French. There are multiple aspects of keigo: polite speech, humble speech, and honorific speech.
+
+\TermEntry{kun'yomi 訓読み} \quote{interpretation reading}: Native Japanese pronunciation of a word written with kanji. These readings are common in words with kana suffixes ({\em see} \Romajiterm{okurigana}{送り仮名}) and words that consist of a single kanji.
+
+\TermEntry{maru 丸} \quote{circle}: The \Grapheme{ﾟ} diacritic applied to kana of the \Phoneme{h}-column to change their onset sound to \Phoneme{p}. More formally called handakuten \hbox{半濁点} \quote{half dakuten}.
+
+\TermEntry{mora} One unit or \quotation{beat} of spoken sound, from the Latin for \quote{delay}. Long vowels and doubled consonants are two morae in length; all other syllables are one mora.
+
+\TermEntry{nanori 名乗り} \quote{name declaration}: Pronunciation of kanji in names that may have a unique reading, neither on'yomi nor kun'yomi. Example: The place name \hbox{長谷} is read as \ja\quotation{はせ}\en, neither of which are standard readings for those kanji.
+
+\TermEntry{okurigana 送り仮名} \quote{accompanying kana}: Kana affixes that perform grammatical inflection on a kanji word.
+
+\TermEntry{on'yomi 音読み} \quote{sound reading}: Sino-Japanese pronunciations of kanji that were imported along with the Chinese writing system. These readings are common when kanji appear as part of a compound ({\em see} \Romajiterm{jukugo}{熟語}).
+
+\TermEntry{particle} A word that never inflects, and only appears as an attachment to other words. In Japanese, particles are called \ruby{助詞}{じょ|し} \quote{helper parts of speech}. They are distinct from \ruby{助動詞}{じょ|どう|し} \quote{bound auxiliaries}, which do inflect.
+
+\TermEntry{radical} Component of a Chinese character, from the Latin for \quote{root}. Traditionally, there are 214 standard radicals as described in the {\em Kāngxī zìdiǎn}, a dictionary from the Qing dynasty. {\em See also} \Romajiterm{bushu}{部首}.
+
+\TermEntry{rendaku 連濁} \quote{connected dulling}: Sequential voicing, where the next syllable in a compound word changes its initial consonant sound from unvoiced to voiced; that is, has dakuten added to its initial kana. Dolly-sensei calls this phenomenon Ten-ten Hooking. Examples: {\em kana} becomes {\em gana} in the compound words {\em hira{\bf g}ana}, {\em okuri{\bf g}ana}, and {\em furi{\bf g}ana}; {\em hito} and {\em toki} when reduplicated become {\em hito{\bf b}ito}, {\em toki{\bf d}oki}.
+
+\TermEntry{rōmaji ローマ字} \quote{Roman letters}: The Roman alphabet; transliteration of Japanese words into the Roman alphabet.
+
+\TermEntry{sokuon 促音} \quote{doubled sound}: Technical name for small \Grapheme{っ} or \Grapheme{ッ}. {\em See also} \Cap{gemination}.
+
+\TermEntry{ten-ten 点々} \quote{dot-dot}: Abbreviated name for \Cap{dakuten}.
+
+\stopchapter
+\stopcomponent
