@@ -7,14 +7,14 @@ compile TEX_FILEPATH:
     # The working directory must be the same as the source file being compiled
     # for component path resolution to work.
     cd $(dirname {{TEX_FILEPATH}})
-    context --errors=list $(basename {{TEX_FILEPATH}})
+    context --errors=list $(basename {{TEX_FILEPATH}}) || echo 'Compilation failed'
     # There isn't an option to set the output directory for `context`
     # executable, so just move the output files afterward
-    mv *.{tuc,pdf,log} {{justfile_directory()}}/{{out_dir}}
+    mv *.{tuc,pdf,log,tua} {{justfile_directory()}}/{{out_dir}} || true
 
 # Remove all files in the output dir
 clean:
-    rm {{justfile_directory()}}/{{out_dir}}/*.* || true
+    rm {{justfile_directory()}}/{{out_dir}}/*.* || echo 'No outputs to clean.'
 
 # Convert the referenced image to PNG and save as next figure no.
 nextfigure IMAGE_NAME:
@@ -33,3 +33,8 @@ nextfigure IMAGE_NAME:
     # Re-pad to 4 digits
     nextfig=$(printf "figure%04d.png" "$num")
     dwebp docs/media/{{IMAGE_NAME}}.webp -o media/$nextfig
+
+# Run the MetaTeX checker and the ChkTeX linter
+check:
+    mtxrun --script check **/*.tex
+    chktex -v --localrc .chktexrc **/*.tex
