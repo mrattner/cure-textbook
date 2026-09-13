@@ -35,11 +35,15 @@
   \setuppagenumbering[alternative=doublesided]
   
   % さくら appears a lot, so render her name in a special way.
-  \define\Sakura{さくら}
+  \define\Sakura{\dontleavehmode\hbox{さくら}}
   
   % Path is relative to the calling file, not this environment file.
   \setupexternalfigures
-    [directory={../media/}]
+    [directory={../media/},
+    maxheight=13.0em]
+  
+  \setupframedtext[align=normal,verytolerant]
+  \setuphead[section][hang=line]
 
   % Custom macro for inserting a glossed example sentence.
   \define[2]\Gloss{
@@ -49,7 +53,8 @@
     \stopframedtext
   }
 
-  \definedelimitedtext[Grapheme] [left=⟨, right=⟩]
+  \definedelimitedtext[Grapheme] [left=\utfchar{0x3008}, right=\utfchar{0x3009}]
   \definedelimitedtext[Phoneme] [left=/, right=/]
+  \definedelimitedtext[Phonetic] [left=\utfchar{0x005B}, right=\utfchar{0x005D}]
 
 \stopenvironment
