@@ -33,10 +33,7 @@
   \setupheadertexts % Reset
   \setupheadertexts [chapter] [pagenumber] [pagenumber] [chapter]
   \setuppagenumbering[alternative=doublesided]
-  
-  % さくら appears a lot, so render her name in a special way.
-  \define\Sakura{\dontleavehmode\hbox{さくら}}
-  
+    
   % Path is relative to the calling file, not this environment file.
   \setupexternalfigures
     [directory={../media/},
@@ -44,11 +41,16 @@
   
   \setupframedtext[align=normal,verytolerant]
   \setuphead[section][hang=line]
+  
+  % Shortcut for temporary language switch inline with main text.
+  \define[1]\JPN{\start\language[ja]#1\stop}
+  
+  % さくら appears a lot, so render her name in a special way.
+  \define\Sakura{\dontleavehmode\hbox{\JPN{さくら}}}
 
   % Custom macro for inserting a glossed example sentence.
   \define[2]\Gloss{
-    \startframedtext
-      #1\crlf
+    \startframedtext\JPN{#1}\crlf
       \quote{#2}
     \stopframedtext
   }
