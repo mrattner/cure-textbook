@@ -1,0 +1,195 @@
+\environment env_ConfigGlobal
+\environment env_Config
+
+\startcomponent AppendixKana
+\startchapter[title={Kana reference}]
+
+Japanese text can be written in various layouts and orientations. Sometimes it's arranged in left-to-right horizontal rows, like English; sometimes it's in columns from top-right to bottom-left. Books and magazines typically use the vertical format, with their covers opening to the right. The following charts should be read in columns from right-to-left and top-to-bottom, making the order {\em a-i-u-e-o, ka-ki-ku-ke-ko}, and so on.
+
+\startsubject[title={Hiragana}]
+\startplacetable[location={here,none}]
+  \hbox{\startplacelegend
+    \startcontent
+    \bTABLE
+      \bTR
+        \bTD a\NUT{}あ \eTD   \bTD ka\NUT{}か\eTD
+        \bTD sa\NUT{}さ\eTD   \bTD ta\NUT{}た\eTD
+        \bTD na\NUT{}な\eTD   \bTD ha\NUT{}は\footnote{Pronounced \Phonetic{wa} when used as a particle}\eTD
+        \bTD ma\NUT{}ま\eTD   \bTD ya\NUT{}や\eTD
+        \bTD ra\NUT{}ら\eTD   \bTD wa\NUT{}わ\eTD
+      \eTR\bTR
+        \bTD i\NUT{}い\eTD    \bTD ki\NUT{}き\eTD
+        \bTD shi\NUT{}し\eTD  \bTD chi\NUT{}ち\eTD
+        \bTD ni\NUT{}に\eTD   \bTD hi\NUT{}ひ\eTD
+        \bTD mi\NUT{}み\eTD   \bTD\eTD
+        \bTD ri\NUT{}り\eTD
+      \eTR\bTR
+        \bTD u\NUT{}う\eTD    \bTD ku\NUT{}く\eTD
+        \bTD su\NUT{}す\eTD   \bTD tsu\NUT{}つ\eTD
+        \bTD nu\NUT{}ぬ\eTD   \bTD fu\NUT{}ふ\eTD
+        \bTD mu\NUT{}む\eTD   \bTD yu\NUT{}ゆ\eTD
+        \bTD ru\NUT{}る\eTD   \bTD n\NUT{}ん\eTD
+      \eTR\bTR
+        \bTD e\NUT{}え\eTD    \bTD ke\NUT{}け\eTD
+        \bTD se\NUT{}せ\eTD   \bTD te\NUT{}て\eTD
+        \bTD ne\NUT{}ね\eTD   \bTD he\NUT{}へ\footnote{Pronounced \Phonetic{ɛ} when used as a particle}\eTD
+        \bTD me\NUT{}め\eTD   \bTD\eTD
+        \bTD re\NUT{}れ\eTD
+      \eTR\bTR
+        \bTD o\NUT{}お\eTD    \bTD ko\NUT{}こ\eTD
+        \bTD so\NUT{}そ\eTD   \bTD to\NUT{}と\eTD
+        \bTD no\NUT{}の\eTD   \bTD ho\NUT{}ほ\eTD
+        \bTD mo\NUT{}も\eTD   \bTD yo\NUT{}よ\eTD
+        \bTD ro\NUT{}ろ\eTD   \bTD wo\NUT{}を\footnote{Only ever appears as a particle, pronounced \Phonetic{o}}\eTD
+      \eTR
+    \eTABLE
+    \stopcontent
+    \startcaption
+      \placelocalfootnotes
+    \stopcaption
+  \stopplacelegend}
+\stopplacetable
+
+\startsubsubject[title={Voiced consonants, and \Phoneme{p}}]
+
+The dakuten \Grapheme{ ﾞ} and maru \Grapheme{ ﾟ} diacritics change the onset consonant in these columns:
+
+\godown[1.5em]
+\simplealignedbox{\textwidth}{middle}
+{\bTABLE
+  \bTR
+    \bTD ga\NUT{}が\eTD\bTD za\NUT{}ざ\eTD\bTD da\NUT{}だ\eTD\bTD ba\NUT{}ば\eTD\bTD pa\NUT{}ぱ\eTD
+  \eTR\bTR
+    \bTD gi\NUT{}ぎ\eTD\bTD ji\NUT{}じ\eTD\bTD ji\NUT{}ぢ\eTD\bTD bi\NUT{}び\eTD\bTD pi\NUT{}ぴ\eTD
+  \eTR\bTR
+    \bTD gu\NUT{}ぐ\eTD\bTD zu\NUT{}ず\eTD\bTD zu\NUT{}づ\eTD\bTD bu\NUT{}ぶ\eTD\bTD pu\NUT{}ぷ\eTD
+  \eTR\bTR
+    \bTD ge\NUT{}げ\eTD\bTD ze\NUT{}ぜ\eTD\bTD de\NUT{}で\eTD\bTD be\NUT{}べ\eTD\bTD pe\NUT{}ぺ\eTD
+  \eTR\bTR
+    \bTD go\NUT{}ご\eTD\bTD zo\NUT{}ぞ\eTD\bTD do\NUT{}ど\eTD\bTD bo\NUT{}ぼ\eTD\bTD po\NUT{}ぽ\eTD
+  \eTR
+\eTABLE}
+
+\stopsubsubject
+
+\startsubsubject[title={Combination kana}]
+
+When a small \Grapheme{ゃ}, \Grapheme{ゅ}, or \Grapheme{ょ} follows a kana ending in an い sound, the onset consonant combines with the \Phoneme{y} to make compound syllables like \JPN{きゃ} \quotation{kya,} \JPN{びょ} \quotation{byo,} \JPN{みゅ} \quotation{myu,} and so on. The following combinations, however, do not add a \Phoneme{y} sound:
+
+\godown[1.5em]
+\simplealignedbox{\textwidth}{middle}
+{\bTABLE
+  \bTR
+    \bTD sha\NUT{}しゃ\eTD\bTD ja\NUT{}じゃ\eTD\bTD cha\NUT{}ちゃ\eTD
+  \eTR\bTR
+    \bTD shu\NUT{}しゅ\eTD\bTD ju\NUT{}じゅ\eTD\bTD chu\NUT{}ちゅ\eTD
+  \eTR\bTR
+    \bTD sho\NUT{}しょ\eTD\bTD jo\NUT{}じょ\eTD\bTD cho\NUT{}ちょ\eTD
+  \eTR
+\eTABLE}
+
+Small \Grapheme{っ} is not pronounced as \quotation{tsu}, but as a pause to double the length of the following consonant, as in \JPN{やった} \quotation{yatta}, \JPN{みっつ} \quotation{mittsu}.
+
+\stopsubsubject
+
+\startsubsubject[title={Altered pronunciations}]
+The long vowels \JPN{おう} and \JPN{えい} are pronounced like \JPN{おお} and \JPN{ええ}, not as diphthongs.
+
+The syllable ん is often pronounced like \Phoneme{m} before a \Phoneme{b} or \Phoneme{p} sound, because the lips naturally close around it. For example, \JPN{せんぱい} becomes \quotation{se{\bf m}pai}; \JPN{がんばって} becomes \quotation{ga{\bf m}batte}.
+
+In many words, the syllables す, し, and つ can have their vowel sound dropped, sounding more like \quotation{s,} \quotation{sh,} or \quotation{ts.} For example, \JPN{たすける} becomes \quotation{tas'keru}; \JPN{です} and \JPN{でした} become \quotation{des'}, \quotation{desh'ta}.
+
+\stopsubsubject
+\stopsubject
+
+\startsubject[title={Katakana}]
+
+\simplealignedbox{\textwidth}{middle}
+{\bTABLE
+  \bTR
+    \bTD a\NUT{}ア\eTD    \bTD ka\NUT{}カ\eTD
+    \bTD sa\NUT{}サ\eTD   \bTD ta\NUT{}タ\eTD
+    \bTD na\NUT{}ナ\eTD   \bTD ha\NUT{}ハ\eTD
+    \bTD ma\NUT{}マ\eTD   \bTD ya\NUT{}ヤ\eTD
+    \bTD ra\NUT{}ラ\eTD   \bTD wa\NUT{}ワ\eTD
+  \eTR\bTR
+    \bTD i\NUT{}イ\eTD    \bTD ki\NUT{}キ\eTD
+    \bTD shi\NUT{}シ\eTD  \bTD chi\NUT{}チ\eTD
+    \bTD ni\NUT{}二\eTD   \bTD hi\NUT{}ヒ\eTD
+    \bTD mi\NUT{}ミ\eTD   \bTD\eTD
+    \bTD ri\NUT{}リ\eTD
+  \eTR\bTR
+    \bTD u\NUT{}ウ\eTD    \bTD ku\NUT{}ク\eTD
+    \bTD su\NUT{}ス\eTD   \bTD tsu\NUT{}ツ\eTD
+    \bTD nu\NUT{}ヌ\eTD   \bTD fu\NUT{}フ\eTD
+    \bTD mu\NUT{}ム\eTD   \bTD yu\NUT{}ユ\eTD
+    \bTD ru\NUT{}ル\eTD   \bTD n\NUT{}ン\eTD
+  \eTR\bTR
+    \bTD e\NUT{}エ\eTD    \bTD ke\NUT{}ケ\eTD
+    \bTD se\NUT{}セ\eTD   \bTD te\NUT{}テ\eTD
+    \bTD ne\NUT{}ネ\eTD   \bTD he\NUT{}ヘ\eTD
+    \bTD me\NUT{}メ\eTD   \bTD\eTD
+    \bTD re\NUT{}レ\eTD
+  \eTR\bTR
+    \bTD o\NUT{}オ\eTD    \bTD ko\NUT{}コ\eTD
+    \bTD so\NUT{}ソ\eTD   \bTD to\NUT{}ト\eTD
+    \bTD no\NUT{}ノ\eTD   \bTD ho\NUT{}ホ\eTD
+    \bTD mo\NUT{}モ\eTD   \bTD yo\NUT{}ヨ\eTD
+    \bTD ro\NUT{}ロ\eTD   \bTD wo\NUT{}ヲ\eTD
+  \eTR
+\eTABLE}
+
+The same diacritics and combinations from hiragana apply to katakana as well. Katakana long vowels, instead of using two kana, are represented with a 
+\Grapheme{ー} character: \JPN{ノート} \quotation{nōto}, \JPN{ケーキ} \quotation{keiki}. Long consonants are still indicated with a small tsu: \JPN{ベッド} \quotation{beddo}, \JPN{ギャップ} \quotation{gyappu}.
+
+\startsubsubject[title={Foreign combinations}]
+
+Because foreign loan words are written in katakana, there are some additional combination kana for rendering non-Japanese syllables:
+
+\godown[1.5em]
+\simplealignedbox{\textwidth}{middle}
+{\bTABLE
+  \bTR
+    \bTD\eTD
+    \bTD\eTD
+    \bTD tsa\NUT{}ツァ\eTD
+    \bTD fa\NUT{}ファ\eTD
+    \bTD\eTD
+    \bTD va\NUT{}ヴァ\eTD
+  \eTR\bTR
+    \bTD\eTD
+    \bTD[aligncharacter=no,align=flushright] ti\NUT{}ティ\crlf{}di\NUT{}ディ\eTD
+    \bTD tsi\NUT{}ツィ\eTD
+    \bTD fi\NUT{}フィ\eTD
+    \bTD wi\NUT{}ウィ\eTD
+    \bTD vi\NUT{}ヴィ\eTD
+  \eTR\bTR
+    \bTD\eTD
+    \bTD[aligncharacter=no,align=flushright]tu\NUT{}トゥ\crlf{}du\NUT{}ドゥ\eTD
+    \bTD\eTD
+    \bTD\eTD
+    \bTD wu\NUT{}ヲゥ\eTD
+    \bTD[aligncharacter=no,align=flushleft]vu\NUT{}ヴ\eTD
+  \eTR\bTR
+    \bTD[aligncharacter=no,align=flushright]she\NUT{}シェ\crlf{}je\NUT{}ジェ\eTD
+    \bTD che\NUT{}チェ\eTD
+    \bTD tse\NUT{}ツェ\eTD
+    \bTD fe\NUT{}フェ\eTD
+    \bTD we\NUT{}ウェ\eTD
+    \bTD ve\NUT{}ヴェ\eTD
+  \eTR\bTR
+    \bTD\eTD
+    \bTD\eTD
+    \bTD tso\NUT{}ツォ\eTD
+    \bTD fo\NUT{}フォ\eTD
+    \bTD wo\NUT{}ウォ\eTD
+    \bTD vo\NUT{}ヴォ\eTD
+  \eTR
+\eTABLE}
+
+The \Phoneme{v} onset would be pronounced more like \Phonetic{bj}, as in the Norse {\em bjørn}. More commonly the \Phoneme{b}-column of katakana is used for representing this foreign consonant sound in Japanese, such as in the term \JPN{ビジュアル・デザイン} \quote{visual design}.
+
+\stopsubsubject
+\stopsubject
+\stopchapter
+\stopcomponent

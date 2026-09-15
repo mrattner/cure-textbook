@@ -14,6 +14,48 @@
   % NB: Each family only supports certain sizes; lookup which ones are available.
   \setupbodyfont[main,rm,12pt]
   
+  %%%%% TABLES %%%%%
+  \definecharacter NUT \utfchar{0x2002}
+
+  % Graphically draw the outer borders, since rule thickness would apply to all sides
+  \startuseMPgraphic{MP:thickRight}
+    draw rightboundary OverlayBox withpen pensquare scaled 3pt;
+    clip currentpicture to OverlayBox;
+    setbounds currentpicture to OverlayBox;
+  \stopuseMPgraphic
+  \startuseMPgraphic{MP:thickTop}
+    draw topboundary OverlayBox withpen pensquare scaled 3pt;
+    clip currentpicture to OverlayBox;
+    setbounds currentpicture to OverlayBox;
+  \stopuseMPgraphic
+  
+  \startuseMPgraphic{MP:upperCorner}
+    draw topboundary OverlayBox withpen pensquare scaled 4pt;
+    draw rightboundary OverlayBox withpen pensquare scaled 4pt;
+    clip currentpicture to OverlayBox;
+    setbounds currentpicture to OverlayBox;
+  \stopuseMPgraphic
+  
+  \defineoverlay[OL:thickRight][\useMPgraphic{MP:thickRight}]
+  \defineoverlay[OL:thickTop][\useMPgraphic{MP:thickTop}]
+  \defineoverlay[OL:upperCorner][\useMPgraphic{MP:upperCorner}]
+  
+  \setupTABLE[
+    direction=reverse,
+    rulethickness=0.25pt,
+    alignmentcharacter={text->\NUT{}},
+    aligncharacter=yes,
+    align={middle,lohi},
+    offset=0.5em]
+  \setupTABLE[row][first][background={OL:thickTop}]
+  \setupTABLE[column][first][background={OL:thickRight}]
+  \setupTABLE[1][1][background={OL:upperCorner}]
+  \setuplegend[before=\startlocalfootnotes, after=\stoplocalfootnotes]
+  % \setupcaption[table][location=top, align=flushleft, width=max, minwidth=\textwidth]
+  
+  % Use symbol-based numbering
+  \setupnotation[footnote][numberconversion=set 2]
+  
   %%%%% LAYOUT %%%%%
   \setupwhitespace[big]   % Paragraph spacing
   \setupinterlinespace[line=4.0ex]  % Line spacing
@@ -40,6 +82,10 @@
     maxheight=13.0em]
   
   \setupframedtext[align=normal,verytolerant]
+
+  % Keep section headers with some lines of their initial paragraph
+  \setuphead[section][before={\testpage[4]}]
+  \setuphead[subsection][before={\testpage[2]}]
   \setuphead[section][hang=line]
   
   % Shortcut for temporary language switch inline with main text.
