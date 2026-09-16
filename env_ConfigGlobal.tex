@@ -93,6 +93,9 @@
   
   % さくら appears a lot, so render her name in a special way.
   \define\Sakura{\dontleavehmode\hbox{\JPN{さくら}}}
+  
+  % Japanese punctuation for a fill-in-the-blank stand-in word.
+  \define\Whatev{\dontleavehmode\hbox{\bigcirc{}\bigcirc{}}}
 
   % Custom macro for inserting a glossed example sentence.
   \define[2]\Gloss{
@@ -104,5 +107,6 @@
   \definedelimitedtext[Grapheme] [left=\utfchar{0x3008}, right=\utfchar{0x3009}]
   \definedelimitedtext[Phoneme] [left=/, right=/]
   \definedelimitedtext[Phonetic] [left=\utfchar{0x005B}, right=\utfchar{0x005D}]
+  \definedelimitedtext[Highlight] [left=\utfchar{0x3010}, right=\utfchar{0x3011}]
 
 \stopenvironment
