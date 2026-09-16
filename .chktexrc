@@ -1,2 +1,4 @@
 Silent { \environment \component \completecontent
   \bTABLE \eTABLE \bTR \eTR \bTD \eTD \placelocalfootnotes }
+WordDash { 0 }
+DashExcpt { topic--comment Topic--comment Topic--Comment topic--subject }

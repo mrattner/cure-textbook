@@ -38,4 +38,5 @@ nextfigure IMAGE_NAME:
 # Run the MetaTeX checker and the ChkTeX linter
 check:
     mtxrun --script check **/*.tex
-    chktex -v --localrc .chktexrc **/*.tex
+    @# 'Space in front of parenthesis' W36 not applicable in Japanese context.
+    chktex -n36 -v --localrc .chktexrc **/*.tex
