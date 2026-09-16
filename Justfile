@@ -33,6 +33,7 @@ nextfigure IMAGE_NAME:
     # Re-pad to 4 digits
     nextfig=$(printf "figure%04d.png" "$num")
     dwebp docs/media/{{IMAGE_NAME}}.webp -o media/$nextfig
+    mv docs/media/{{IMAGE_NAME}}.webp {{justfile_directory()}}
 
 # Run the MetaTeX checker and the ChkTeX linter
 check:
