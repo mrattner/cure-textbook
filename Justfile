@@ -39,4 +39,5 @@ nextfigure IMAGE_NAME:
 check:
     mtxrun --script check **/*.tex
     @# 'Space in front of parenthesis' W36 not applicable in Japanese context.
-    chktex -n36 -v --localrc .chktexrc **/*.tex
+    @# 'Inter-sentence space' W13 has false positives, not very useful.
+    chktex -n36 -n13 -v --localrc .chktexrc **/*.tex
